@@ -1,0 +1,152 @@
+@mixin generateSpaces($num)
+  @for $i from 1 through $num
+    @if $num > 0
+      $num: $num - 2
+
+      .p-#{$num}
+        padding: #{$num}px !important
+
+      .p-t-#{$num}
+        padding-top: #{$num}px !important
+
+      .p-b-#{$num}
+        padding-bottom: #{$num}px !important
+
+      .p-r-#{$num}
+        padding-right: #{$num}px !important
+
+        [dir=rtl] &
+          padding-right: unset !important
+          padding-left: #{$num}px !important
+
+      .p-l-#{$num}
+        padding-left: #{$num}px !important
+
+        [dir=rtl] &
+          padding-left: unset !important
+          padding-right: #{$num}px !important
+
+      .p-x-#{$num}
+        padding-right: #{$num}px !important
+        padding-left: #{$num}px !important
+
+      .p-y-#{$num}
+        padding-top: #{$num}px !important
+        padding-bottom: #{$num}px !important
+
+      .m-#{$num}
+        margin: #{$num}px !important
+
+      .m-t-#{$num}
+        margin-top: #{$num}px !important
+
+      .m-b-#{$num}
+        margin-bottom: #{$num}px !important
+
+      .m-r-#{$num}
+        margin-right: #{$num}px !important
+
+        [dir=rtl] &
+          margin-right: unset !important
+          margin-left: #{$num}px !important
+
+      .m-l-#{$num}
+        margin-left: #{$num}px !important
+
+        [dir=rtl] &
+          margin-left: unset !important
+          margin-right: #{$num}px !important
+
+      .m-x-#{$num}
+        margin-right: #{$num}px !important
+        margin-left: #{$num}px !important
+
+      .m-y-#{$num}
+        margin-top: #{$num}px !important
+        margin-bottom: #{$num}px !important
+    .m-auto
+      margin: auto
+
+    .m-x-auto
+      margin-left: auto
+      margin-right: auto
+
+    .m-y-auto
+      margin-top: auto
+      margin-bottom: auto
+
+    .m-l-auto
+      margin-left: auto
+
+    .m-r-auto
+      margin-right: auto
+
+    .m-t-auto
+      margin-top: auto
+
+    .m-b-auto
+      margin-bottom: auto
+
+@mixin generateSmallSpaces($num)
+  @for $i from 0 through $num
+      .p-#{$num}
+        padding: #{$num}px !important
+
+      .p-t-#{$num}
+        padding-top: #{$num}px !important
+
+      .p-b-#{$num}
+        padding-bottom: #{$num}px !important
+
+      .p-r-#{$num}
+        padding-right: #{$num}px !important
+
+        [dir=rtl] &
+          padding-right: unset !important
+          padding-left: #{$num}px !important
+
+      .p-l-#{$num}
+        padding-left: #{$num}px !important
+
+        [dir=rtl] &
+          padding-left: unset !important
+          padding-right: #{$num}px !important
+
+      .p-x-#{$num}
+        padding-right: #{$num}px !important
+        padding-left: #{$num}px !important
+
+      .p-y-#{$num}
+        padding-top: #{$num}px !important
+        padding-bottom: #{$num}px !important
+
+      .m-#{$num}
+        margin: #{$num}px !important
+
+      .m-t-#{$num}
+        margin-top: #{$num}px !important
+
+      .m-b-#{$num}
+        margin-bottom: #{$num}px !important
+
+      .m-r-#{$num}
+        margin-right: #{$num}px !important
+
+        [dir=rtl] &
+          margin-right: unset !important
+          margin-left: #{$num}px !important
+
+      .m-l-#{$num}
+        margin-left: #{$num}px !important
+
+        [dir=rtl] &
+          margin-left: unset !important
+          margin-right: #{$num}px !important
+
+      .m-x-#{$num}
+        margin-right: #{$num}px !important
+        margin-left: #{$num}px !important
+
+      .m-y-#{$num}
+        margin-top: #{$num}px !important
+        margin-bottom: #{$num}px !important

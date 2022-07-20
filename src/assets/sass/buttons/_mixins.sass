@@ -1,0 +1,99 @@
+@mixin btn-filled($principal-color,$hover-color,$disabled-color,$active-color)
+    background: $principal-color
+    border: 1px solid $principal-color
+    color: #ffff
+    cursor: pointer
+    &:hover
+        background: $hover-color
+        border: 1px solid $hover-color
+        cursor: pointer
+    &:disabled
+        background: $disabled-color
+        border: solid $disabled-color
+        cursor: no-drop
+    &:active
+        background: $active-color
+
+@mixin btn-bordered($principal-color,$hover-color,$disabled-color,$active-color)
+    border: 1px solid $principal-color
+    background: transparent
+    color: $principal-color
+    cursor: pointer
+    &:hover
+        border: 1px solid $hover-color
+        color: $hover-color !important
+        cursor: pointer
+    &:disabled
+        color: $disabled-color
+        border: solid $disabled-color
+        background: transparent !important
+        cursor: no-drop
+    &:active
+        border: 1px solid $active-color
+        outline: none !important
+
+@mixin btn-borderless($principal-color,$hover-color,$disabled-color,$active-color)
+    border: transparent
+    background: transparent
+    color: $principal-color
+    cursor: pointer
+    &:hover
+        border: transparent
+        background: transparent
+        color: $hover-color
+        cursor: pointer
+    &:disabled
+        color: $disabled-color
+        border: transparent
+        background: transparent
+        cursor: no-drop
+    &:active
+        border: none !important
+        
+@mixin btn-size($size)
+    @if ($size == large)
+        height: 48px
+        border-radius: 4px
+        padding: 12px
+        @include btn-large
+    @else if ($size == miduem) // not included in the design, just implemented for future use cases
+        height: 40px
+        padding: 12px 
+        border-radius: 4px
+        @include btn-medium
+    @else // (small) not included in the design, just implemented for future use cases
+        height: 30px
+        border-radius: 4px
+        padding: 8px
+        @include btn-small
+
+/* fonts */   
+@mixin btn-large()
+    font-size: $fs-14
+    line-height: 27px
+    font-weight: 600
+    font-family: primary-lighter
+    @media (max-width: 992px) // repeating the media queries just in case we need to change it as there is no design provided for the responsive
+        font-size: $fs-14
+    @media (max-width: 768px)
+        font-size: $fs-14
+    @media (max-width: 576px)
+        font-size: $fs-14
+
+@mixin btn-medium()
+    font-size: $fs-12
+    line-height: 27px
+    font-weight: 400
+    font-family: primary-lighter
+    @media (max-width: 992px)
+        font-size: $fs-12
+    @media (max-width: 768px)
+        font-size: $fs-12
+    @media (max-width: 576px)
+        font-size: $fs-12
+
+@mixin btn-small()
+    font-size: $fs-12
+    line-height: 27px
+    font-weight: 400
+    font-family: primary-lighter

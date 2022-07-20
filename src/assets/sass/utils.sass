@@ -1,0 +1,343 @@
+@import "./_mixins"
+/* hidden scrollbar  */
+.hidden-scroll::-webkit-scrollbar
+    width: 0px !important
+    display: none !important
+.hidden-scroll::-webkit-scrollbar-track
+    background: transparent !important
+.hidden-scroll::-webkit-scrollbar-thumb
+    background: transparent !important
+.hidden-scroll::-webkit-scrollbar-thumb:hover
+    background: transparent !important
+
+.custom-scroll::-webkit-scrollbar
+    width: 4px !important
+    border-radius: 2px !important
+
+.custom-scroll::-webkit-scrollbar-track
+    background: #99A5B2 !important
+    border-radius: 2px !important
+
+.custom-scroll::-webkit-scrollbar-thumb
+    background: #B6BEC8 !important
+    border: 2px solid #B6BEC8
+    border-radius: 2px !important
+
+.custom-scroll-search-input
+    position: sticky
+    top: 0
+    background-color: #EAF2FA !important
+
+/* overflow classes*/
+.overflow-y-scroll
+    overflow-y: auto !important
+.overflow-x-scroll
+    overflow-x: scroll !important
+    overflow-y: hidden !important
+    @media only screen and (min-width: 992px)
+        overflow-x: unset !important
+        overflow-y: hidden !important
+.overflow-x-auto
+    overflow-x: auto
+
+.overflow-hidden
+    overflow: hidden
+
+/* text align*/
+.text-center
+    text-align: center !important
+.text-right
+    text-align: right !important
+.text-left
+    text-align: left !important
+.text-underline
+    text-decoration: underline
+.text-no-decoration
+    text-decoration: none !important
+
+/* Radius classes */
+.no-radius
+    border-radius: 0 !important
+.radius-2
+    border-radius: 2px !important
+.radius-4
+    border-radius: 4px !important
+.radius-6
+    border-radius: 6px !important
+.radius-8
+    border-radius: 8px !important
+.radius-10
+    border-radius: 10px !important
+.radius-12
+    border-radius: 12px !important
+.radius-14
+    border-radius: 14px !important
+.radius-16
+    border-radius: 16px !important
+.radius-18
+    border-radius: 18px !important
+.radius-20
+    border-radius: 20px !important
+.radius-full
+    border-radius: 999999px !important
+
+.of-cover
+    object-fit: cover
+.of-contain
+    object-fit: contain
+
+.radius-t-r-8
+    border-top-right-radius: 8px !important
+.radius-t-l-8
+    border-top-left-radius: 8px !important
+.radius-b-r-8
+    border-bottom-right-radius: 8px !important
+.radius-b-l-8
+    border-bottom-left-radius: 8px !important
+
+.radius-t-lr-8
+    border-top-left-radius: 8px !important
+    border-top-right-radius: 8px !important
+
+.radius-b-lr-8
+    border-bottom-left-radius: 8px !important
+    border-bottom-right-radius: 8px !important
+.no-right-left
+    right: 0
+    left: 0
+
+
+/* border classes */
+.border-none
+    border: none
+.border-bottom
+    border-bottom: 1px solid
+.border-top
+    border-top: 1px solid
+.border-right
+    border-right: 1px solid
+    [dir=rtl] &
+        border-right: 0
+        border-left: 1px solid
+.border-left
+    border-left: 1px solid
+    [dir=rtl] &
+        border-left: 0
+        border-right: 1px solid
+.border-full
+    border: 1px solid
+.border-neutral-20
+    border-color: #D3D8DE
+
+.border-white
+    border-color: #fff
+/* height classes*/
+.h-100vh
+    height: 100vh
+.min-h-100vh
+    min-height: 100vh
+.max-h-70vh
+    max-height: 70vh
+.h-100
+    height: 100%
+.h-90
+    height: 90%
+.h-80
+    height: 80%
+.h-70
+    height: 70%
+.h-60
+    height: 60%
+
+.h-40p
+    height: 40px
+
+/* width */ 
+.w-auto
+    width: auto !important
+.w-max-content
+    width: max-content !important
+@include generateWidthClasses(105)
+
+/* box shadow */
+.shadow-1
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15)
+.hover-shadow-1
+    &:hover
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15)
+.shadow-2
+    box-shadow: 0px 6.25px 20px rgba(0, 0, 0, 0.125)
+.hover-shadow-2
+    &:hover
+        box-shadow: 0px 6.25px 20px rgba(0, 0, 0, 0.125)
+.shadow-3
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.11)
+.hover-shadow-3
+    &:hover
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.11)
+.shadow-4
+    &:hover
+        box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.12)
+.hover-shadow-4
+    &:hover
+        box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.12)
+.shadow-5
+    &:hover
+        box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.12)
+.hover-shadow-5
+    &:hover
+        box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.12)
+.shadow-6
+    &:hover
+        box-shadow: 0px 17.5px 70px rgba(0, 0, 0, 0.12)
+.hover-shadow-6
+    &:hover
+        box-shadow: 0px 17.5px 70px rgba(0, 0, 0, 0.12)
+.shadow-7
+    &:hover
+        box-shadow: 0px 35px 90px rgba(0, 0, 0, 0.135)
+.hover-shadow-7
+    &:hover
+        box-shadow: 0px 35px 90px rgba(0, 0, 0, 0.135)
+
+/* cursor classes*/
+.cursor-pointer
+    cursor: pointer !important
+.cursor-no-drop
+    cursor: no-drop !important
+.cursor-context-menu
+    cursor: context-menu !important
+.cursor-grab
+    cursor: -webkit-grab
+    cursor: grab
+.cursor-grabbing
+    cursor: -webkit-grabbing
+    cursor: grabbing
+.cursor-default
+    cursor: default
+
+/* opacity classes*/
+.opacity-05
+    opacity: 0.5
+.opacity-06
+    opacity: 0.6
+.opacity-07
+    opacity: 0.7
+.opacity-08
+    opacity: 0.8
+.opacity-09
+    opacity: 0.9
+.opacity-1
+    opacity: 1
+
+@keyframes shimmer
+    0%
+        background-position: -1000px 0
+
+    100%
+        background-position: 1000px 0
+
+.shimmer-loader
+    animation: shimmer 2s infinite linear
+    background: linear-gradient(to right, #eff1f3 4%, #eeecec 25%, #eff1f3 36%)
+    background-size: 1000px 100%
+
+.card-loader
+    animation: shimmer 2s infinite linear
+    background: linear-gradient(to right, #eff1f3 4%, #eeecec 25%, #eff1f3 36%)
+    // background-size: 1000px 100%
+    height: 320px
+
+/* ------------- */
+
+/*  to use tooltip
+ 
+ 1. add [ base-tooltip ] class to your div 
+ 2. add data-tooltip attribute with value you want to display */
+
+.base-tooltip
+    position: relative
+    cursor: pointer
+
+    &:hover
+        &::after
+            opacity: 1
+            visibility: visible
+            font-family: primary-regular
+
+    &::after
+        content: attr(data-tooltip)
+        position: absolute
+        top: 20px
+        right: 0
+        display: block
+        width: 200px
+        max-width: 300px
+        background-color: #0E243F
+        color: #fff
+        padding: 5px 8px
+        border-radius: 3px
+        font-size: 12px
+        opacity: 0
+        visibility: hidden
+        transition: all .3s ease-in-out
+
+        [dir=rtl] &
+            right: auto
+            left: 0
+
+/* ------------- */
+
+.horizontal-separator
+    height: 1px
+.position-relative
+    position: relative
+.position-fixed
+    position: fixed
+.position-absolute
+    position: absolute
+
+.no-bottom
+    bottom: 0
+.bottom-10
+    bottom: 10px
+
+.z-index-999999
+    z-index: 999999 !important
+.height-150px
+    height: 150px !important
+.left-25pc
+    left: 25%
+.right-25pc
+    right: 25%
+.top-30px
+    top: 30px
+
+.no-left
+    left: 0
+
+.disabled
+    opacity: .5
+    cursor: no-drop
+    border-width: 1px !important
+
+/* transaform classes */
+.transform-180
+    transform: rotate(180deg) !important
+.transform-90
+    transform: rotate(90deg) !important
+.transform-45
+    transform: rotate(45deg) !important
+
+.hide-text-overflow
+    white-space: pre !important
+    text-overflow: ellipsis !important
+    overflow: hidden !important
+
+.no-select
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none

@@ -1,0 +1,10 @@
+@mixin generateWidthClasses($num)
+    @for $i from 1 through $num
+        @if $num > 5
+
+            $num: $num - 5
+            .w-#{$num}
+                width: #{$num}% !important
+            .min-w-#{$num}
+                min-width: #{$num}% !important
+

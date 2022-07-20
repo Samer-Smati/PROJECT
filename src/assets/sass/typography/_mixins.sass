@@ -1,0 +1,46 @@
+@import "./_variables"
+@import "./_font-faces"
+
+$weights: ("hairline", "thin", "lighter", "regular", "medium", "bold", "semi-bold", "extra-bold", "black")
+
+@each $weight in $weights
+    .text-#{$weight}
+        font-family: primary-#{$weight}
+    .h-#{$weight} // the font siazes commented as they are not provided in the design system
+        // font-size: $fs-36
+        // line-height: 42px
+        font-family: primary-#{$weight}
+        // @media (max-width: 992px)
+        //     font-size: $fs-32
+        // @media (max-width: 768px)
+        //     font-size: $fs-28
+        // @media (max-width: 576px)
+        //     font-size: $fs-24
+    .p-#{$weight}
+        // font-size: $fs-20
+        // line-height: 28px
+        font-family: primary-#{$weight}
+        // @media (max-width: 992px)
+        //     font-size: $fs-16
+        // @media (max-width: 768px)
+        //     font-size: $fs-14
+        // @media (max-width: 576px)
+        //     font-size: $fs-12
+
+$fweights: (100, 200, 300, 400, 500,600, 700,800,900)
+@each $weight in $fweights
+    .fw-#{$weight} 
+        font-weight: #{$weight}
+
+
+
+@mixin set-LH($arg)
+    @extend %LH-#{$arg} !optional
+
+@mixin generateFontSized($num)
+    @for $i from 1 through $num
+        @if $num > 10
+        $num: $num - 2
+        .fs-#{$num}
+            font-size: #{$num}px
+            @include set-LH($num)
